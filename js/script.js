@@ -1,6 +1,9 @@
 // Load vehicles from the server
+const url = `http://localhost:3000/vehicles`
+// const url = `https://my-json-server.typicode.com/matsaina/mcar/vehicles`
+
 function loadVehicles() {
-  fetch("http://localhost:3000/vehicles")
+  fetch(`${url}`)
     .then((resp) => resp.json())
     .then((vehicles) =>
       vehicles.forEach((vehicle) => {
@@ -27,7 +30,7 @@ function showList(vehicle) {
   document
     .getElementById(`edit${vehicle.id}`)
     .addEventListener("click", (e) => {
-      fetch(`http://localhost:3000/vehicles/${vehicle.id}`)
+      fetch(`${url}/${vehicle.id}`)
         .then((response) => response.json())
         .then((veh) => {
           document.getElementById("name").value = veh.name;
@@ -60,7 +63,7 @@ function showList(vehicle) {
 <form id = 'myform' class="form-inline">
   <input type="text" class="form-control" id="service" placeholder="Enter Service" name="name" required>
   <input type="number" class="form-control" id="price" placeholder="Enter Price"  name="date" required>
-  <input type="text" class="form-control" id="servicedate" placeholder="Enter Price"  name="servicedate" required>
+  <input type="text" class="form-control" id="servicedate" placeholder="Enter Service Date"  name="servicedate" required>
   <input type ='hidden' id = "inputserviceid" value = '5000'>
 <br>
   <button type="submit" id="delveh${vehicle.id}" class="btn btn-success">
@@ -90,7 +93,7 @@ function showList(vehicle) {
       document
         .getElementById(`delservice${data.id}`)
         .addEventListener("click", (e) => {
-          fetch(`http://localhost:3000/vehicles/${vehicle.id}`)
+          fetch(`${url}/${vehicle.id}`)
             .then((response) => response.json())
             .then((data) => {
               console.log(theId);
@@ -98,7 +101,7 @@ function showList(vehicle) {
                 (historyItem) => historyItem.id !== theId
               );
 
-              fetch(`http://localhost:3000/vehicles/${vehicle.id}`, {
+              fetch(`${url}/${vehicle.id}`, {
                 method: "PATCH",
                 headers: {
                   "Content-Type": "application/json",
@@ -125,7 +128,7 @@ function showList(vehicle) {
   });
 
   document.getElementById(`del${vehicle.id}`).addEventListener("click", (e) => {
-    fetch(`http://localhost:3000/vehicles/${vehicle.id}`, {
+    fetch(`${url}/${vehicle.id}`, {
       method: "DELETE",
     }).then(() => {
       li.remove();
@@ -193,7 +196,7 @@ function vehicleListener() {
     let inputvehicleid = event.target.inputvehicleid.value;
 
     if (inputvehicleid == 5000) {
-      fetch(`http://localhost:3000/vehicles`, {
+      fetch(`${url}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -215,7 +218,7 @@ function vehicleListener() {
           ul.appendChild(li);
         });
     } else {
-      fetch(`http://localhost:3000/vehicles/${inputvehicleid}`, {
+      fetch(`${url}/${inputvehicleid}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
