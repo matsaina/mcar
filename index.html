@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content />
+    <meta name="author" content />
+    <link rel="icon" href="favicon.ico" />
+
+    <title>Mcar</title>
+
+    <link
+      rel="canonical"
+      href="https://getbootstrap.com/docs/4.0/examples/blog/"
+    />
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Custom styles for this template -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900"
+      rel="stylesheet"
+    />
+    <link href="css/blog.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="container">
+      <header class="blog-header py-3">
+        <div class="row flex-nowrap justify-content-between align-items-center">
+          <div class="col-4 pt-1">
+            <a class="text-muted" href="#">Cars</a>
+          </div>
+          <div class="col-4 text-center">
+            <a class="blog-header-logo text-dark" href="#">MCar</a>
+          </div>
+          <div class="col-4 d-flex justify-content-end align-items-center">
+            <a class="text-muted" href="#">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="mx-3"
+              >
+                <circle cx="10.5" cy="10.5" r="7.5" />
+                <line x1="21" y1="21" x2="15.8" y2="15.8" />
+              </svg>
+            </a>
+            <a class="btn btn-sm btn-outline-secondary" href="#">Log Out</a>
+          </div>
+        </div>
+      </header>
+
+      <div class="nav-scroller py-1 mb-2">
+        <nav class="nav d-flex justify-content-between"></nav>
+      </div>
+
+      <div class="jumbotron p-3 p-md-5 text-white rounded bg-dark">
+        <div class="col-md-6 px-0">
+          <h1 class="display-4 font-italic">Profile</h1>
+          <p class="lead my-3">Matsaina Koech.</p>
+        </div>
+      </div>
+
+      <div class="row mb-4">
+        <div class="col-md-12">
+          <div class="card-body d-flex flex-column align-items-start">
+            <strong class="d-inline-block mb-2 text-success"
+              >ADD/EDIT CAR</strong
+            >
+            <form class="form-inline" id="newvehicle">
+              <input
+                type="text"
+                class="form-control"
+                id="name"
+                placeholder="Car Model"
+                name="name"
+                required
+              />
+              <input
+                type="text"
+                class="form-control"
+                id="plate"
+                placeholder="Number Plate"
+                name="plate"
+                required
+              />
+              <input
+                type="text"
+                class="form-control"
+                id="mileage"
+                placeholder="Mileage"
+                name="mileage"
+                required
+              />
+              <input
+                type="text"
+                class="form-control"
+                id="nextdate"
+                placeholder="Next Service Date"
+                name="nextdate"
+                required
+              />
+              <input type="hidden" id="inputvehicleid" value="5000" />
+              <button type="submit" class="btn btn-success">ADD/EDIT</button>
+            </form>
+          </div>
+        </div>
+        
+        <div class="col-md-4">
+          <div class="card flex-md-row mb-4 box-shadow h-md-250">
+            <div class="card-body d-flex flex-column align-items-start">
+              <strong class="d-inline-block mb-2 text-primary">My Cars</strong>
+              <!-- SHOW CAR TITLES -->
+              <ul class="list-group col-md-12" id="myul"></ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-8">
+          <div class="">
+            <div id="mydiv" class="card mb-4 box-shadow">
+              <div class="card-body">
+                <h5>Welcome To Mcar Vehicle Management System</h5>
+                <ol>
+                  <li>Add Your Vehicle Details</li>
+                  <li>Add Services Performed and Cost of The Service</li>
+                  <li>Get notified when service date reaches</li>
+                  <li>Save Costs on your Next Service</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="blog-footer">
+      <p>Matsaina</p>
+      <p>
+        <a href="#">Back to top</a>
+      </p>
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery-3.2.1.slim.min.js" crossorigin="anonymous"></script>
+    <script>
+      window.jQuery ||
+        document.write(
+          '<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>'
+        );
+    </script>
+    <script src="js/jquery-slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/holder.min.js"></script>
+    <script src="./js/script.js"></script>
+    <script>
+      Holder.addTheme("thumb", {
+        bg: "#55595c",
+        fg: "#eceeef",
+        text: "Thumbnail",
+      });
+    </script>
+  </body>
+</html>

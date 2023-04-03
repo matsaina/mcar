@@ -1,0 +1,60 @@
+{
+  "vehicles": [
+    {
+      "id": 1,
+      "name": "Honda Civic",
+      "plate": "kdd 666k",
+      "mileage": "5001",
+      "nextdate": "10/05/2021",
+      "history": [
+        {
+          "id": 1,
+          "date": "2022-01-01",
+          "description": "Oil Change",
+          "price": 550
+        },
+        {
+          "id": 3,
+          "description": "brake pads",
+          "price": "1500",
+          "date": "22-05-2024"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Toyota Camry",
+      "plate": "kdd 674k",
+      "mileage": "7005",
+      "nextdate": "10/05/2021",
+      "history": [
+        {
+          "id": 1,
+          "date": "2022-01-01",
+          "description": "Oil Change",
+          "price": 500
+        },
+        {
+          "id": 2,
+          "date": "2022-02-01",
+          "description": "Tire Rotation",
+          "price": 155
+        },
+        {
+          "id": 3,
+          "date": "2022-03-01",
+          "description": "Brake Service",
+          "price": 150
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Probox",
+      "plate": "kaa 674k",
+      "mileage": "500",
+      "data": [],
+      "nextdate": "9/9/2021"
+    }
+  ]
+}
